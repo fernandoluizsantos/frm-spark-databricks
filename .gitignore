@@ -1,0 +1,99 @@
+# ==========================================================
+# Segredos / variáveis de ambiente
+# ==========================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ==========================================================
+# Dados e saídas do cluster Spark (montados via docker-compose)
+# ==========================================================
+storage/*
+logs/*
+metrics/*
+build/storage/
+build/logs/
+build/metrics/
+!**/.gitkeep
+
+# Artefatos gerados pelo Spark / Hive / Delta
+spark-warehouse/
+metastore_db/
+derby.log
+checkpoint/
+checkpoints/
+_checkpoint/
+*.crc
+_SUCCESS
+_delta_log/
+*.parquet
+*.orc
+*.avro
+
+# Event logs / History Server
+spark-events/
+
+# ==========================================================
+# Python
+# ==========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+.venv/
+venv/
+env/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ==========================================================
+# Databricks
+# ==========================================================
+.databricks/
+.databrickscfg
+bundle.tf.json
+
+# ==========================================================
+# Java / Scala (build local)
+# ==========================================================
+target/
+project/target/
+.bsp/
+.metals/
+.bloop/
+*.class
+# Obs.: os .jar em build/config/spark/jars são usados no Dockerfile
+# e continuam versionados de propósito.
+
+# ==========================================================
+# IDEs / editores
+# ==========================================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.idea/
+*.swp
+*~
+
+# Claude Code
+.claude/worktrees/
+.claude/settings.local.json
+
+# ==========================================================
+# Sistema operacional
+# ==========================================================
+.DS_Store
+Thumbs.db
+desktop.ini
