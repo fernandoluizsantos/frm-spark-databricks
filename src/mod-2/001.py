@@ -11,8 +11,8 @@ sc = spark.sparkContext
 
 print("SparkContext initialized successfully.")
 print(f"Spark Version: {spark.version}")
-print(f"Application ID: {sc.ApplicationId}")
-print(f"Available Cores: {sc.DefaultParallelism}")
+print(f"Application ID: {sc.applicationId}")
+print(f"Available Cores: {sc.defaultParallelism}")
 
 
 spark.stop()
